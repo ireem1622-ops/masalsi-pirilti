@@ -1511,17 +1511,19 @@ dialog .kicker{
 const stories = JSON.parse(document.getElementById('masalMetinleri').textContent);
 // Kart resimleri bu dosyanin icinde cizilir; internet gerektirmez.
 // Sekiz sahne tek gorsel atlasindan gosterilir.
-function illustration(kind) {
-    return '';
-}
 const cards=document.querySelector('#cards'),search=document.querySelector('#search');
 let filter='Tümü';
 const normalize=s=>s.toLocaleLowerCase('tr-TR');
 function render() {
     cards.replaceChildren();
     let shown=0;
+    const query = normalize(search.value.trim());
     stories.forEach((s,i)=> {
-        if((filter!=='Tümü'&&s.tag!==filter)||!normalize(s.title).includes(normalize(search.value.trim())))return;shown++;const card=document.createElement('article');card.className='card';card.innerHTML=`<div class="art scene-${i}" role="img" aria-label="${s.title} için masal illüstrasyonu"><span class="scene-number">${String(i+1).padStart(2,'0')}</span></div><div class="card-body"><span class="tag">${s.tag}</span><h3>${s.title}</h3><p>${s.desc}</p><button class="read" type="button" aria-label="${s.title} masalını oku">Hikâyeye gir <span aria-hidden="true">↗</span></button></div>`;card.querySelector('button').addEventListener('click',()=>openStory(i));cards.append(card)
+        if((filter!=='Tümü'&&s.tag!==filter)||!normalize(s.title).includes(query))return;
+        shown++;
+        const card=document.createElement('article');card.className='card';
+        card.innerHTML=`<div class="art scene-${i}" role="img" aria-label="${s.title} için masal illüstrasyonu"><span class="scene-number">${String(i+1).padStart(2,'0')}</span></div><div class="card-body"><span class="tag">${s.tag}</span><h3>${s.title}</h3><p>${s.desc}</p><button class="read" type="button" aria-label="${s.title} masalını oku">Hikâyeye gir <span aria-hidden="true">↗</span></button></div>`;card.querySelector('button').addEventListener('click',()=>openStory(i));
+        cards.append(card);
     });
     document.querySelector('#count').textContent=shown+' masal seni bekliyor';
     document.querySelector('#empty').hidden=shown!==0;
@@ -1541,6 +1543,7 @@ function updateSize() {
     document.querySelector('#sizeLabel').textContent=textSize+' px';
     document.querySelector('#smaller').disabled=textSize<=16;
     document.querySelector('#larger').disabled=textSize>=30;
+    if (reader.open) requestAnimationFrame(updateProgress);
 }
 function openStory(i) {
     currentStory=i;
