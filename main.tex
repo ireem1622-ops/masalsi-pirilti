@@ -122,7 +122,8 @@
 \fbox{\parbox{0.88\linewidth}{\centering\vspace{6pt}
 {\large\bfseries Proje Bağlantıları}\\[8pt]
 \textbf{GitHub deposu:}\\ \githublink \\[8pt]
-\textbf{YouTube sunum videosu:}\\ \youtubelink
+\textbf{YouTube sunum videosu:}\\
+\url{https://www.youtube.com/watch?v=1Jkv4_qK31A}
 \vspace{6pt}}}
 \vfill
 {\large 6 Kasım 2026 \par}
@@ -130,14 +131,12 @@
 \hypersetup{pageanchor=true}
 
 \tableofcontents
-\newpage
 
 % ====================================================================
 \section{Giriş}
 % ====================================================================
-\aciklama{Projenin amacını, neyi neden yaptığınızı ve raporun içeriğini 5--8 cümleyle
-anlatın. Ödev gereksinimlerini (8--12 masal, tek HTML dosyası, içsel CSS ve içsel
-JavaScript) nasıl karşıladığınızı belirtin.}
+
+Masalsı Pırıltı, sekiz masalı görsellerle bir araya getiren etkileşimli bir masal okuma web sitesidir. Projeyi, ziyaretçilerin masalları kolayca keşfedebileceği, farklı hikâyeler arasında seçim yapabileceği ve okuma görünümünü kendi tercihine göre ayarlayabileceği bir ortam oluşturmak amacıyla hazırladım. Masalları görsel, başlık ve kısa açıklama içeren kartlarla sunarak okuyucunun metnin tamamını açmadan önce hikâye hakkında fikir edinmesini ve ilgisini çeken masala yönelmesini amaçladım. Mavi, mor ve turkuaz tonlarını orman ve geceyi çağrıştıran illüstrasyonlarla birleştirdim, küçük hareketli pırıltılarla sitenin adını destekleyen bir atmosfer oluşturdum. Sitede sekiz masala yer verdim ve sayfanın yapısını, görsellerini, masal metinlerini ve etkileşimlerini tek HTML dosyasında topladım. İçsel CSS ile renkleri, yazı tiplerini, kartların yerleşimini ve farklı ekran genişliklerine uyum sağlayan düzeni belirledim. İçsel JavaScript ile başlığa göre arama, tema filtreleme, rastgele masal seçimi, masalın okuma ekranında açılması, yazı boyutunun değiştirilmesi ve gece moduna geçiş gibi özellikleri gerçekleştirdim.
 
 \subsection{Proje Özeti}
 Masalsı pırıltı,sekiz masalı illüstrasyonlarla bir araya getiren etkileşimli bir masal okuma web sitesidir.Projenin amacı,ziyaretçilere masalsı bir atmosfer içinde kolay ve rahat bir okuma deneyimi sunmaktır.Sitede masal adına göre arama,temaya göre filtreleme,rastgele bir masal seçme, masalı okurken isteğe göre yazı boyutunu değiştirme ve gece moduna geçme gibi özellikler bulunmaktadır.Tasarımda renk paleti olarak lacivert,mor ve turkuaz tonları seçilmiştir.Ayrıca sitenin masalsı atmosferini yansıtmak amacıyla küçük hareketli ışıklar kullanılmıştır.
@@ -155,18 +154,31 @@ Stil kodları içsel (\texttt{<style>} içinde)        & $\boxtimes$ \\
 Betik kodları içsel (\texttt{<script>} içinde)      & $\boxtimes$ \\
 İnternetsiz açılıp çalışıyor                        & $\boxtimes$ \\
 JavaScript sayfada anlamlı bir işlev görüyor        & $\boxtimes$ \\
-Masal metinleri kendi cümlelerimle yazıldı          & $\boxtimes$ \\
 Sayfa telefonda da düzgün görünüyor                 & $\boxtimes$ \\
 \bottomrule
 \end{tabular}
 \end{center}
-\aciklama{Karşıladığınız her satırın kutusunu $\boxtimes$ ile değiştirin.}
 
 % ====================================================================
 \section{Masalların Seçimi}
 % ====================================================================
-\aciklama{Hangi masalları, hangi ölçütlere göre seçtiniz? Tabloyu masal sayınıza göre
-düzenleyin (en az 8, en fazla 12 satır). Kullandığınız kaynakları Kaynakça'ya yazın.}
+Kurnaz Kurt: Kurnazlık temasını hayvan karakterler üzerinden işlemesi nedeniyle seçtim. Karakterlerin davranışları ve bu davranışların sonuçları, okuyucunun olayları değerlendirmesine olanak sağlıyor. Hayvanların yer aldığı bir anlatıya yer vererek derlemedeki karakter çeşitliliğini artırmayı amaçladım.
+
+Sihirli Tavşan: Sihirli olaylar etrafında gelişen macerası ve hayal gücünü harekete geçiren yapısı nedeniyle seçtim. Olağanüstü bir karakterin hikâyeyi yönlendirmesi, sitenin masalsı atmosferini destekliyor. Tavşan karakteri ayrıca diğer masallardan ayırt edilebilen bir kart görseli oluşturmama imkân verdi.
+
+Altın Saçlı Kız: Açgözlülüğün zararlarını ele alması ve karakterin seçimlerinin sonuçlarını göstermesi nedeniyle seçtim. Bu tema, okuyucunun istekler ve davranışlar arasındaki ilişki üzerine düşünmesini sağlıyor. Masalın belirgin karakteri, hikâyenin kart üzerinde kolayca tanınmasına da yardımcı oluyor.
+
+Limon Kız: Olağanüstü olayları ve merak uyandıran adı nedeniyle seçtim. Hikâyenin hayal gücüne açık yapısı, ziyaretçiyi masalın devamını öğrenmeye yönlendiriyor. Limonla ilişkilendirilen karakter ve renkler, sitenin genel paleti içinde farklı bir görsel vurgu oluşturmama da olanak sağladı.
+
+Akıllı Ormancı: Aklın güçten üstünlüğünü işlemesi ve sorunlara düşünerek çözüm bulmayı öne çıkarması nedeniyle seçtim. Karakterin karşılaştığı durumları nasıl değerlendirdiği, masalın temel mesajını anlaşılır kılıyor. Orman ortamı da sitenin doğadan ilham alan görsel diliyle ilişki kuruyor.
+
+Altın Bülbül: Macera ve merak duygusunu canlı tutan anlatımı nedeniyle seçtim. Hikâyenin okuyucuyu bir sonraki olayı öğrenmeye yönlendirmesi, derlemeye hareketli bir okuma seçeneği katıyor. Altın bülbül figürü, masalın görsel olarak tanınmasını sağlayan bir odak noktası oluşturuyor.
+
+Zümrüdüanka Kuşu: Umut ve iyilik temalarını olağanüstü bir kuş figürü üzerinden ele alması nedeniyle seçtim. Fantastik yapısı, sitenin sihirli atmosferini güçlendirirken okuyucunun hayalinde farklı bir dünya kurmasına yardımcı oluyor. Kuşun görkemli görünümü de illüstrasyonlarda dikkat çeken bir karakter oluşturmamı sağladı.
+
+Gülen Ayva Ağlayan Nar: Cesaret ve empati temalarını işlemesi, ayrıca alışılmadık adıyla merak uyandırması nedeniyle seçtim. Gülme ve ağlama gibi insana ait duyguların meyvelerle ilişkilendirilmesi, masala özgün bir anlatım katıyor. Bu özellik, hikâyeyi hem içerik hem de görsel tasarım açısından derlemedeki diğer masallardan ayırıyor.
+
+\newpage
 
 \begin{longtable}{@{}cP{4cm}P{3cm}P{5.4cm}@{}}
 \toprule
@@ -187,13 +199,13 @@ düzenleyin (en az 8, en fazla 12 satır). Kullandığınız kaynakları Kaynak�
 % ====================================================================
 \section{Tasarım Kararları}
 % ====================================================================
-\aciklama{Masal temasını yansıtmak için orman, gece ve ışık
+Masal temasını yansıtmak için orman, gece ve ışık
 unsurlarının yer aldığı bir görsel dil tercih ettim.
-Her masalın içeriğine uygun illüstrasyonlar kullanıldı.
+Her masalın içeriğine uygun illüstrasyonlar kullandım.
 Küçük hareketli ışık noktaları, Masalsı Pırıltı adını
 desteklerken ziyaretçiyi masalları keşfetmeye yönlendiriyor.
 Kitap ve pırıltı simgelerini birleştiren logo da sitenin
-okuma amacını yansıtıyor.}
+okuma amacını yansıtıyor.
 
 \subsection{Konuya Uygunluk}
 Türk masallarındaki orman, saray ve olağanüstü varlıklardan
@@ -217,15 +229,68 @@ Georgia / Arial & -- & Başlıklarda masalsı görünüm, arayüzde kolay okunab
 
 \subsection{Okunabilirlik, Gezinme ve Duyarlı Tasarım}
 \begin{itemize}
-  \item \textbf{Okunabilirlik:} Yazı boyutu değiştirilebilir. Satır uzunluğu sınırlandırıldı,
-satır aralıkları ferah tutuldu. Krem zemin üzerinde koyu
-metin kullanılarak okuma kolaylaştırıldı.
-  \item \textbf{Gezinme:} Kullanıcı masallara kartlardan, arama kutusundan veya tema
-filtrelerinden ulaşabilir. Rastgele masal seçeneği de bulunur.
-  \item \textbf{Duyarlı tasarım:} Ekran daraldığında masal kartları daha az sütunda gösterilir.
-Menü, yazılar ve okuma alanı ekran genişliğine göre düzenlenir.
-  \item \textbf{Tutarlılık:} Sayfa boyunca aynı renk paleti, yazı tipleri, buton biçimleri
-ve benzer boşluklar kullanılarak görsel bütünlük sağlandı.
+
+\item \textbf{Okunabilirlik.}
+Masal metinlerinin rahat okunabilmesi için okuma alanını
+kart listesinden ayrı bir pencere olarak düzenledim.
+Metnin satır uzunluğunu sınırlandırdım ve satır aralıklarını
+geniş tutarak uzun paragrafların sıkışık görünmesini önledim.
+Açık krem zemin üzerinde koyu metin kullanarak yazının
+arka plandan kolayca ayrılmasını amaçladım.
+Okuma ekranında yazı boyutu başlangıçta 20 piksel olarak
+belirlendi. Kullanıcı, büyütme ve küçültme düğmeleriyle
+bu değeri 16 ile 30 piksel arasında değiştirebiliyor.
+Gece modu seçeneği de okuma alanının koyu bir görünüme
+geçmesini sağlıyor. Böylece okuyucu, metnin görünümünü
+kendi tercihine göre ayarlayabiliyor.
+
+\item \textbf{Gezinme.}
+Ziyaretçilerin masallara farklı yollarla ulaşabilmesi için
+kartlar, arama kutusu ve tema filtrelerini birlikte kullandım.
+Kartlarda masalın görseli, başlığı ve kısa tanıtımı yer alıyor.
+Bu bilgiler, okuyucunun masalı açmadan önce seçim yapmasına
+yardımcı oluyor. Arama kutusu başlığa göre sonuçları
+daraltırken Sihir, Cesaret, İyilik ve Kurnazlık filtreleri
+masalları temaları üzerinden keşfetmeyi sağlıyor.
+Karar veremeyen ziyaretçiler için rastgele masal seçen
+bir düğme de ekledim. Okuma ekranındaki önceki ve sonraki
+masal düğmeleriyle kart listesine dönmeden farklı
+hikâyelere geçilebiliyor. İlk ve son masalda ilgili geçiş
+düğmesinin devre dışı kalması, listenin sınırlarını
+kullanıcıya gösteriyor.
+
+\item \textbf{Duyarlı tasarım.}
+Sayfanın farklı ekran genişliklerine uyum sağlaması için
+CSS medya sorguları kullandım. Geniş ekranlarda kartlar
+yan yana yerleşirken ekran daraldığında sütun sayısı
+azalıyor. Böylece kartların içindeki görsellerin,
+başlıkların ve düğmelerin dar bir alana sıkışmasını
+önlemeyi amaçladım. Menü, giriş bölümü ve okuma alanındaki
+yerleşim ve boşluklar da ekran genişliğine göre değişiyor.
+Mobil düzeni değerlendirirken yalnızca görünümü değil,
+arama kutusuna ulaşmayı ve masalı açmayı da dikkate aldım.
+Bu özelliklerin telefondaki davranışını ayrıca kontrol
+etmek, masaüstü tasarımının mobilde nasıl kullanılacağını
+daha iyi anlamamı sağladı.
+
+\newpage
+
+\item \textbf{Tutarlılık.}
+Sayfanın farklı bölümlerinde ortak renkler, yazı tipleri,
+kart biçimleri ve düğme stilleri kullanarak görsel
+bütünlük oluşturdum. Başlıklarda Georgia, genel arayüzde
+Arial yazı tipinden yararlandım. Kartların içerikleri
+değişse de başlık, kısa açıklama ve okuma düğmesinin
+benzer sırada bulunmasını sağladım.
+Böylece ziyaretçi bir kartın düzenini öğrendiğinde
+diğer kartlarda da bilgiyi kolayca bulabiliyor.
+Renkleri ve boşlukları ortak CSS kurallarıyla yönetmek,
+tasarımda yaptığım değişiklikleri ilgili alanlara
+birlikte uygulamamı kolaylaştırdı.
+Kartların üzerine gelindiğinde oluşan hareket ve gölge
+değişiklikleri de benzer etkileşimlerde aynı görsel
+geri bildirimin verilmesini sağlıyor.
+
 \end{itemize}
 
 \subsection{Ekran Görüntüleri}
@@ -248,11 +313,7 @@ ve benzer boşluklar kullanılarak görsel bütünlük sağlandı.
   \small Masal okuma ekranı
 \end{center}
 
-\begin{center}
-  \haftagorsel{Masal kartları.png}
 
-  \small Masal kartlarının görünümü
-\end{center}
 
 % \begin{figure}[h]
 %   \centering
@@ -262,10 +323,6 @@ ve benzer boşluklar kullanılarak görsel bütünlük sağlandı.
 
 \clearpage
 \section{Gerçekleştirme}
-% ====================================================================
-\aciklama{Sayfanın nasıl çalıştığını kendi cümlelerinizle anlatın. Kodu sunumda
-açıklayabilmelisiniz; burada da mantığını yazın. Kodun tamamını değil, önemli
-bölümlerini kısa örneklerle gösterin.}
 
 \subsection{HTML Yapısı}
 Sayfa; logo ve menünün bulunduğu üst alan, giriş bölümü,
@@ -301,8 +358,12 @@ addEventListener ile işlevlere bağlanıyor.
 search.addEventListener('input', render);
 \end{lstlisting}
 
-\subsection{Sayfanın Özellikleri}
 
+
+\newpage
+
+
+\subsection{Sayfanın Özellikleri}
 
 % ====================================================================
 \section{Yapay Zekâ Kullanımı}
@@ -332,19 +393,12 @@ yazı boyutu ve boşluk değerlerini değiştirerek tasarımı
 tercihlerime göre geliştirdim. Değişikliklerin etkisini
 önizlemede kontrol ettim.
 
-% ====================================================================
+% 
+
+\newpage 
 \section{Haftalık Katkılar}
 % ====================================================================
-\aciklama{Her hafta ders içinde yaptığınız çalışmayı kısaca yazın (2--4 cümle). Hangi
-özelliği eklediğinizi ya da neyi düzelttiğinizi belirtin ve ilgili commit mesajını
-ya da bağlantısını ``Commit'' satırına yazın. Her satıra ekran görüntüsü ekleyin:
-resimleri \texttt{hafta1.png}, \texttt{hafta2.png}, \ldots{} adıyla Overleaf
-projesine yükleyin. Aynı haftaya ikinci bir görsel eklemek için
-\texttt{hafta1b.png} gibi bir dosya yükleyin; kendiliğinden görünür.
-Her haftanın altındaki kutulardan o hafta için geçerli olanı $\boxtimes$ ile
-işaretleyin: dersin kendisinde katılım gösterdiyseniz ``Ders içinde katılım
-sergiledim'', o haftayı sonradan tamamladıysanız ``Telafi yaptım''. Telafi
-yaptıysanız yapılan çalışmanın metninde bunu açıkça belirtin.}
+
 
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.7cm}%
                     >{\raggedright\arraybackslash}p{6.4cm}%
@@ -357,52 +411,37 @@ yaptıysanız yapılan çalışmanın metninde bunu açıkça belirtin.}
 \rowcolor{ana}\textcolor{white}{\textbf{Hafta}} & \textcolor{white}{\textbf{Yapılan çalışma}} & \textcolor{white}{\textbf{Görsel}} \\
 \midrule
 \endhead
-\bottomrule
 \endfoot
 
 \textbf{1. hafta}\newline [tarih] &
 [Bu hafta yaptığınız çalışma.]\newline \textbf{Commit:} [WorldWideWeb projesini anlatan bir sayfa hazırladım. İçeriği HTML’de başlık, paragraf ve bağlantılarla düzenledim. CSS ile yazı tipini, arka planı ve bağlantı renklerini belirledim.]\katilimkutulari &
 \haftagorsel{hafta1.png}\haftaek{hafta1b.png} \\
-\midrule
+
 \textbf{2. hafta}\newline [tarih] &
 [Bu hafta yaptığınız çalışma.]\newline \textbf{Commit:} [Filmin renk paletini, simetrisini ve tipografisini anlatan bir web sayfası hazırladım. İçeriği ana ve alt başlıklarla ayırdım. Filmin görsel dünyasına uygun olarak mor arka plan ve pembe alt başlıklar kullandım.]\katilimkutulari &
 \haftagorsel{hafta2.png}\haftaek{hafta2b.png} \\
-\midrule
+
 \textbf{3. hafta}\newline [tarih] &
 [Bu hafta yaptığınız çalışma.]\newline \textbf{Commit:} [Sayfaya “Günün Mesajı” adlı bir düğme ekledim. Düğmeye tıklandığında JavaScript ile boş paragrafın içeriğini güncelleyerek “Bugün güzel bir gün!” mesajını gösterdim.]\katilimkutulari &
 \haftagorsel{hafta3.png}\haftaek{hafta3b.png} \\
-\midrule
+
 \textbf{4. hafta}\newline [tarih] &
 [Bu hafta yaptığınız çalışma.]\newline \textbf{Commit:} [İlk uygulamada, tıklanınca renkleri açılan dört kartlı bir eşleştirme oyunu hazırladım. JavaScript ile aynı renkteki kartların gizlenmesini, farklı renkteki kartların ise tekrar griye dönmesini sağladım.]\katilimkutulari &
 \haftagorsel{hafta4.png}\haftaek{hafta4b.png} \\
-\midrule
+
 \textbf{5. hafta}\newline [tarih] &
 [Bu hafta yaptığınız çalışma.]\newline \textbf{Commit:} [CodePen’de düğmeye tıklandığında bir kutunun rengini değiştiren örnek üzerinde çalıştım. JavaScript’te if/else koşuluyla kutunun renginin gri ve sarı arasında nasıl değiştiğini inceledim.]\katilimkutulari &
 \haftagorsel{hafta5.png}\haftaek{hafta5b.png} \\
-\midrule
+
 \textbf{6. hafta}\newline [tarih] &
 [Bu hafta yaptığınız çalışma.]\newline \textbf{Commit:} [CodePen’de “Renk Değiştir” düğmesine tıklanınca bir kutunun arka plan rengini değiştiren örnek üzerinde çalıştım. JavaScript’te if/else kullanarak kutu griyse sarıya, sarıysa griye dönmesini sağlayan koşulu inceledim.]\katilimkutulari &
 \haftagorsel{hafta6.png}\haftaek{hafta6b.png} \\
-\midrule
-\textbf{7. hafta}\newline [tarih] &
-[Bu hafta yaptığınız çalışma.]\newline \textbf{Commit:} [mesaj veya bağlantı]
-\newline $\square$ Ders içinde katılım sergiledim
-\newline $\square$ Telafi yaptım &
-\haftagorsel{hafta7.png}\haftaek{hafta7b.png} \\
-\midrule
-\textbf{8. hafta}\newline [tarih] &
-[Bu hafta yaptığınız çalışma.]\par
-\textbf{Commit:} [mesaj veya bağlantı]\par
-$\square$ Ders içinde katılım sergiledim\par
-$\square$ Telafi yaptım &
-\haftagorsel{hafta8.png}\haftaek{hafta8b.png} \\
+
 \end{longtable}
 
 % ====================================================================
 \section{Test ve Değerlendirme}
 % ====================================================================
-\aciklama{Sayfayı hangi tarayıcı ve cihazlarda denediniz? Çalışmayan bir özellik
-olduysa dürüstçe yazın ve nedenini açıklayın.}
 
 \begin{center}
 \rowcolors{2}{acik}{white}
@@ -417,43 +456,42 @@ olduysa dürüstçe yazın ve nedenini açıklayın.}
 \end{tabular}
 \end{center}
 
-\textbf{Denenen tarayıcılar:} [Chrome, Firefox, Edge, Safari vb.]
 
 % ====================================================================
 \section{Sunum Videosu}
 % ====================================================================
 \begin{center}
 \begin{tabular}{@{}ll@{}}
-\textbf{Video süresi:} & [dakika:saniye] \quad \aciklama{12--18 dakika olmalıdır} \\
+\textbf{Video süresi:} & 12:13 \quad \aciklama{12--18 dakika olmalıdır} \\
 \textbf{Görünürlük:} & [Listelenmemiş / Herkese açık] \\
-\textbf{Bağlantı:} & \youtubelink \\
+\textbf{Bağlantı:} & \url{https://www.youtube.com/watch?v=1Jkv4_qK31A} \\
 \end{tabular}
 \end{center}
 
 \subsection{Video Kontrol Listesi}
 \aciklama{Teslimden önce hepsini kontrol edin ve kutuları $\boxtimes$ ile işaretleyin.}
 \begin{itemize}
-  \item[] $\square$ Süre 12--18 dakika aralığında.
+  \item[] $\boxtimes$ Süre 12--18 dakika aralığında.
   \item[] $\square$ Sunum boyunca kameram açık, yüzüm görünüyor.
-  \item[] $\square$ Görünürlük \textbf{Listelenmemiş} ya da Herkese açık; \textbf{Özel} değil.
-  \item[] $\square$ Bağlantıyı gizli pencerede açtım, video oynuyor.
-  \item[] $\square$ YouTube videoyu işlemeyi bitirdi.
+  \item[] $\boxtimes$ Görünürlük \textbf{Listelenmemiş} ya da Herkese açık; \textbf{Özel} değil.
+  \item[] $\boxtimes$ Bağlantıyı gizli pencerede açtım, video oynuyor.
+  \item[] $\boxtimes$ YouTube videoyu işlemeyi bitirdi.
   \item[] $\square$ Videoyu baştan sona izledim; ses ve kamera tüm sunumda var.
-  \item[] $\square$ Kapaktaki bağlantı ile bu bölümdeki bağlantı aynı.
+  \item[] $\boxtimes$ Kapaktaki bağlantı ile bu bölümdeki bağlantı aynı.
 \end{itemize}
 
+
+\newpage
 % ====================================================================
 \section{Sonuç ve Kendi Değerlendirmem}
-% ====================================================================
-\aciklama{Masalsı Pırıltı projesi sayesinde bir web sayfasını tasarlamayı ve etkileşimli hâle getirmeyi öğrendim. En çok zorlandığım nokta, sayfanın bazı özelliklerinin telefonda bilgisayardaki gibi çalışmamasıydı. Sorunun nerede ortaya çıktığını anlamak için bu özellikleri iki cihazda ayrı ayrı denedim. Gerekli düzenlemeleri yaptıktan sonra sayfayı yeniden kontrol ettim. Bu süreçte, bir sorunla karşılaştığımda adım adım ilerlemenin çözüm bulmayı kolaylaştırdığını fark ettim. Benzer bir proje yaparsam mobil kontrolleri sona bırakmayıp her yeni özelliği eklediğimde test ederim.}
+ 
+
+Masalsı Pırıltı projesinde sekiz masalı görseller ve etkileşimli özelliklerle bir araya getirerek bir web sayfasının geliştirilme sürecini deneyimledim. HTML ile içerik yapısını, CSS ile görünümü ve JavaScript ile kullanıcı işlemlerini nasıl yönetebileceğimi öğrendim. Renk, yazı boyutu ve yerleşim kararlarının sayfanın görünümü kadar kullanımını da etkilediğini fark ettim. En çok bazı özelliklerin telefonda ve bilgisayarda farklı çalışması konusunda zorlandım. Sorunun hangi aşamada ortaya çıktığını anlamak için arama ve masal açma işlemlerini ayrı ayrı denedim, düzenlemelerden sonra aynı adımları yeniden kontrol ettim. Yapay zekâ desteğiyle oluşturulan kodu incelemek ve değişikliklerin sonucunu önizlemede görmek, kod ile tasarım arasındaki ilişkiyi anlamama yardımcı oldu. Benzer bir projede mobil kontrolleri başlangıçtan itibaren yapar ve karşılaştığım sorunlarla çözümlerini daha düzenli kaydederim. İleride farklı kullanıcıların görüşlerini de alarak gezinmeyi ve okuma ekranını geliştirmek, teknik bilgimi artırarak kod üzerinde daha bağımsız çalışabilmek isterim.
 
 % ====================================================================
 \section{Kaynakça}
-% ====================================================================
-\aciklama{Masal metinleri için yararlandığınız kitap ve sitelerle, teknik kaynakları
-(MDN vb.) ve kullandığınız görsel kaynaklarını yazın. Masalları kendi
-cümlelerinizle yazmanız gerekir; kaynaklar yalnızca yararlandığınız yerleri
-gösterir.}
+
+
 
 \begin{thebibliography}{9}
 \raggedright
@@ -499,6 +537,8 @@ Masaloku.net.
 \url{https://www.masaloku.net/gulen-ayva-aglayan-nar/}
 
 \end{thebibliography}
+
+\newpage
 
 % ====================================================================
 \appendix
