@@ -1,0 +1,1270 @@
+/* 1. SAYFANIN GORUNUMU: RENKLER, YAZILAR VE YERLESIM */
+/* Renkler ve temel sayfa duzeni */
+:root{
+    --ink:#252c48;
+    --purple:#7354b8;
+    --blue:#283568;
+    --paper:#fffcf5;
+    --lavender:#f0edff}
+*{
+    box-sizing:border-box}
+html{
+    scroll-behavior:smooth}
+body{
+    margin:0;
+    background:var(--lavender);
+    color:var(--ink);
+    font-family:Arial,sans-serif}
+button,input{
+    font:inherit}
+button,a{
+    touch-action:manipulation}
+button{
+    cursor:pointer}
+a{
+    color:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible{
+    outline:3px solid #b568df;
+    outline-offset:5px}
+.wrap{
+    max-width:1200px;
+    margin:auto;
+    padding:0 36px}
+header{
+    height:96px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px}
+.brand{
+    text-decoration:none;
+    font-family:Georgia,serif;
+    font-weight:bold;
+    font-size:25px;
+    letter-spacing:-1px}
+.brand span{
+    color:var(--purple)}
+.brand b{
+    color:#ac77cd;
+    font-size:30px;
+    padding-right:8px}
+nav{
+    display:flex;
+    gap:30px;
+    font-size:14px}
+nav a{
+    text-decoration:none}
+nav a:hover{
+    color:var(--purple)}
+.nav-star{
+    color:var(--purple)}
+.hero{
+    position:relative;
+    overflow:hidden;
+    background:#283568;
+    border-radius:30px;
+    min-height:450px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    color:white;
+    padding:62px 52px;
+    align-items:center}
+.hero:before{
+    content:'';
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:#4d4983;
+    filter:blur(70px);
+    right:0;
+    top:30px}
+.eyebrow{
+    font-size:11px;
+    letter-spacing:3px;
+    font-weight:bold;
+    text-transform:uppercase;
+    color:#d0c4f2}
+.hero h1{
+    font:normal 61px/1.08 Georgia,serif;
+    letter-spacing:-2px;
+    margin:20px 0}
+.hero h1 em{
+    font-weight:normal;
+    color:#e1c8ff}
+.hero p{
+    font-size:15px;
+    line-height:1.8;
+    max-width:350px;
+    color:#e0e4f6}
+.primary{
+    border:0;
+    border-radius:12px;
+    background:#ffe49a;
+    color:#283568;
+    padding:16px 23px;
+    font-weight:bold;
+    text-decoration:none;
+    display:inline-flex;
+    gap:24px;
+    align-items:center}
+.hero .primary{
+    margin-top:16px}
+.hero-copy{
+    position:relative;
+    z-index:1}
+.hero-art{
+    position:relative;
+    width:100%;
+    max-height:340px;
+    overflow:visible}
+.intro{
+    display:flex;
+    align-items:end;
+    justify-content:space-between;
+    margin:64px 0 28px;
+    gap:22px}
+.kicker{
+    font-size:11px;
+    letter-spacing:2px;
+    color:var(--purple);
+    font-weight:bold;
+    text-transform:uppercase}
+h2{
+    font:normal 38px Georgia,serif;
+    letter-spacing:-1px;
+    margin:10px 0}
+.muted{
+    color:#626581;
+    font-size:14px;
+    line-height:1.6}
+.searchbox{
+    position:relative}
+.searchbox span{
+    position:absolute;
+    left:15px;
+    top:13px;
+    color:#73758c}
+.searchbox input{
+    border:1px solid #d9d1ee;
+    background:#faf8ff;
+    padding:14px 15px 14px 39px;
+    border-radius:12px;
+    width:270px;
+    color:var(--ink)}
+.filters{
+    display:flex;
+    gap:9px;
+    flex-wrap:wrap;
+    margin:0 0 27px}
+.filters button{
+    border:1px solid #d8d0ec;
+    background:transparent;
+    color:#575d79;
+    border-radius:30px;
+    padding:9px 18px;
+    font-size:13px}
+.filters button[aria-pressed=true]{
+    color:white;
+    background:var(--purple);
+    border-color:var(--purple)}
+.results-label{
+    font-size:12px;
+    color:#6d6c85;
+    margin-left:auto;
+    align-self:center}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:23px}
+.card{
+    background:#fff;
+    border:1px solid #e4def0;
+    border-radius:20px;
+    overflow:hidden;
+    transition:transform .2s,box-shadow .2s;
+    display:flex;
+    flex-direction:column}
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 16px 26px #45326d12}
+.art{
+    position:relative;
+    height:184px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden}
+.art svg{
+    width:100%;
+    height:100%}
+.card-body{
+    padding:21px;
+    display:flex;
+    flex-direction:column;
+    flex:1}
+.tag{
+    font-size:10px;
+    font-weight:bold;
+    letter-spacing:1.4px;
+    color:#7354b8;
+    text-transform:uppercase}
+.card h3{
+    font:normal 23px/1.2 Georgia,serif;
+    letter-spacing:-.5px;
+    margin:10px 0;
+    min-height:55px}
+.card p{
+    font-size:13px;
+    line-height:1.65;
+    color:#6b6d84;
+    margin:0 0 19px}
+.read{
+    margin-top:auto;
+    text-align:left;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border:0;
+    border-top:1px solid #ece7f3;
+    padding:15px 0 0;
+    background:white;
+    color:#6442a8;
+    font-size:12px;
+    font-weight:bold}
+.read span{
+    font-size:19px}
+.ribbon{
+    margin:58px 0;
+    background:#e3dcf8;
+    border-radius:20px;
+    padding:30px;
+    display:flex;
+    gap:23px;
+    align-items:center}
+.ribbon strong{
+    font:normal 26px Georgia,serif}
+.ribbon p{
+    margin:8px 0 0}
+.ribbon .spark{
+    font-size:45px;
+    color:var(--purple)}
+footer{
+    display:flex;
+    justify-content:space-between;
+    gap:25px;
+    padding:25px 0 35px;
+    border-top:1px solid #dcd4ee;
+    font-size:12px;
+    color:#67667d}
+footer p{
+    margin:0}
+#empty{
+    text-align:center;
+    padding:45px;
+    background:#fff;
+    border-radius:20px}
+#empty button{
+    margin:15px;
+    border:0;
+    border-radius:10px;
+    padding:12px 20px;
+    background:#e3dcf8;
+    color:var(--purple)}
+dialog{
+    border:0;
+    border-radius:22px;
+    width:min(850px,94vw);
+    max-height:90dvh;
+    padding:0;
+    color:var(--ink);
+    background:var(--paper);
+    box-shadow:0 25px 100px #14112d55}
+dialog::backdrop{
+    background:#151a42b3;
+    backdrop-filter:blur(6px)}
+.reader-bar{
+    position:sticky;
+    top:0;
+    background:var(--paper);
+    padding:16px 24px;
+    border-bottom:1px solid #e6dfd3;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    z-index:2}
+.reader-controls{
+    display:flex;
+    gap:8px;
+    align-items:center}
+.reader-controls button,.close{
+    background:#eee8fb;
+    color:#4c3c7d;
+    border:0;
+    border-radius:8px;
+    min-width:40px;
+    min-height:38px;
+    padding:7px 10px}
+.reader-controls button:disabled{
+    opacity:.4;
+    cursor:default}
+.reader-body{
+    padding:40px 60px}
+.reader-body h2{
+    font-size:43px;
+    line-height:1.2;
+    margin:12px 0 24px}
+.reader-text{
+    font:20px/1.9 Georgia,serif;
+    white-space:pre-line}
+.reader-text p{
+    margin:0 0 1.2em}
+.source{
+    border-top:1px solid #e6dfd3;
+    margin-top:35px;
+    padding-top:22px;
+    font:13px/1.8 Arial,sans-serif;
+    color:#626079;
+    overflow-wrap:anywhere}
+.source a{
+    display:block;
+    color:#6442a8}
+.reader-end{
+    text-align:center;
+    color:#9473bb;
+    margin:35px 0;
+    font-size:24px}
+[hidden]{
+    display:none!important}
+.reading-size{
+    font-size:11px;
+    color:#655c79;
+    min-width:35px;
+    text-align:center}
+.source-list{
+    padding-left:20px;
+    line-height:1.8;
+    font-size:15px}
+.source-list li{
+    margin:15px 0}
+.about-text{
+    font-size:16px;
+    line-height:1.8}
+.mobile-dot{
+    display:none}
+@media(max-width:1000px){
+    .grid{
+        grid-template-columns:repeat(2,1fr)}
+    .hero{
+        padding:40px 30px}
+    .hero h1{
+        font-size:49px}
+    .hero-art{
+        min-width:0}
+    .art{
+        height:210px}
+}
+@media(max-width:600px){
+    .wrap{
+        padding:0 18px}
+    header{
+        height:82px}
+    .brand{
+        font-size:21px}
+    nav{
+        gap:14px;
+        font-size:12px}
+    nav .nav-star{
+        display:none}
+    .hero{
+        grid-template-columns:1fr;
+        padding:34px 27px 8px;
+        border-radius:23px}
+    .hero h1{
+        font-size:46px}
+    .hero p{
+        font-size:14px}
+    .hero-art{
+        height:240px;
+        margin-top:15px}
+    .intro{
+        align-items:stretch;
+        flex-direction:column;
+        margin-top:40px;
+        gap:12px}
+    h2{
+        font-size:32px}
+    .searchbox input{
+        width:100%}
+    .grid{
+        gap:13px}
+    .art{
+        height:142px}
+    .card-body{
+        padding:15px}
+    .card h3{
+        font-size:20px;
+        min-height:50px}
+    .card p{
+        font-size:12px}
+    .results-label{
+        width:100%;
+        margin:5px 0}
+    .filters{
+        gap:7px}
+    .filters button{
+        padding:8px 13px}
+    .ribbon{
+        padding:22px;
+        margin:35px 0}
+    .ribbon strong{
+        font-size:23px}
+    footer{
+        flex-direction:column;
+        gap:12px}
+    .reader-body{
+        padding:28px 24px}
+    .reader-body h2{
+        font-size:32px}
+    .reader-bar{
+        padding:12px}
+    .reader-label{
+        font-size:12px}
+    .reader-text{
+        font-size:18px}
+}
+@media(prefers-reduced-motion:reduce){
+    html{
+        scroll-behavior:auto}
+    .card{
+        transition:none}
+}
+:root{
+    --atlas:none}
+/* Yenilenen gorsel kimlik: gece mavisi, lavanta ve resimli hikaye kapaklari. */
+body{
+    background:#f3f0fc;
+    background-image:radial-gradient(ellipse at 90% 0,#dfdcfa80,transparent 55%)}
+.wrap{
+    max-width:1320px;
+    padding:0 48px}
+header{
+    height:108px}
+.brand{
+    font-size:28px;
+    letter-spacing:-1.2px}
+nav{
+    gap:35px;
+    font-size:13px}
+.hero{
+    min-height:515px;
+    border-radius:12px 70px 12px 12px;
+    background:linear-gradient(115deg,#252c58,#393065 70%,#4c3d79);
+    padding:65px 58px;
+    grid-template-columns:1.12fr 1fr}
+.hero h1{
+    font-size:67px;
+    line-height:1.08;
+    letter-spacing:-2.7px}
+.hero h1 em{
+    color:#d8c6f5}
+.hero p{
+    max-width:380px;
+    color:#e0dff2;
+    font-size:15px}
+.eyebrow{
+    font-size:10px;
+    letter-spacing:2.4px;
+    color:#d6c7ec}
+.hero-art{
+    height:340px}
+.hero-actions{
+    display:flex;
+    gap:21px;
+    flex-wrap:wrap;
+    align-items:center}
+.surprise{
+    background:none;
+    border:0;
+    color:#ede8ff;
+    font-size:12px;
+    padding:16px 0}
+.surprise:hover{
+    text-decoration:underline}
+.surprise span{
+    margin-left:8px;
+    color:#ffe49a}
+.hero-note{
+    margin-top:31px;
+    font-size:10px;
+    letter-spacing:1.4px;
+    color:#c4bddf;
+    text-transform:uppercase}
+.hero-note span{
+    margin:0 10px}
+.primary{
+    background:#e5d9fc;
+    color:#3f3065;
+    border-radius:7px;
+    font-size:12px;
+    padding:16px 20px}
+.intro{
+    margin-top:65px}
+.intro h2{
+    font-size:40px}
+.intro .muted{
+    margin-bottom:0}
+.kicker{
+    font-size:10px;
+    letter-spacing:2.4px}
+.filters{
+    margin-top:27px}
+.filters button{
+    font-size:12px}
+.grid{
+    gap:25px}
+.card{
+    border-radius:110px 110px 14px 14px;
+    border:0;
+    box-shadow:0 5px 20px #46386408;
+    position:relative}
+.card:nth-child(even){
+    border-radius:14px 14px 110px 14px}
+.art{
+    height:245px;
+    background-image:var(--atlas);
+    background-size:400% 200%;
+    background-repeat:no-repeat;
+    background-color:#d9d4f1;
+    position:relative}
+.scene-0{
+    background-position:0% 0%}
+.scene-1{
+    background-position:33.333333% 0%}
+.scene-2{
+    background-position:66.666667% 0%}
+.scene-3{
+    background-position:100% 0%}
+.scene-4{
+    background-position:0% 100%}
+.scene-5{
+    background-position:33.333333% 100%}
+.scene-6{
+    background-position:66.666667% 100%}
+.scene-7{
+    background-position:100% 100%}
+.scene-number{
+    position:absolute;
+    bottom:12px;
+    left:15px;
+    font:italic 15px Georgia,serif;
+    color:#fff;
+    background:#28204480;
+    width:30px;
+    height:30px;
+    display:grid;
+    place-items:center;
+    border-radius:50%}
+.card-body{
+    padding:23px 22px 25px}
+.card h3{
+    font-size:25px;
+    min-height:60px}
+.card:nth-child(even) .card-body{
+    padding-bottom:34px}
+.read{
+    font-size:11px;
+    padding-right:12px}
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 35px #45326d18}
+.ribbon{
+    background:transparent;
+    border-top:1px solid #d9d0eb;
+    border-bottom:1px solid #d9d0eb;
+    border-radius:0;
+    padding:35px 0;
+    margin:60px 0 33px}
+.ribbon strong{
+    font-size:31px}
+.ribbon .spark{
+    font-size:50px;
+    color:#9f86c7}
+.ribbon .muted{
+    font-size:13px}
+footer{
+    border:0;
+    padding-top:0}
+.reader-bar{
+    flex-wrap:wrap}
+.progress-track{
+    height:3px;
+    position:sticky;
+    top:70px;
+    background:#e8e0f0;
+    z-index:3}
+#readProgress{
+    height:100%;
+    background:#a78acb;
+    width:0;
+    transition:width .12s}
+.reader-body{
+    padding:40px 68px}
+.reader-text{
+    max-width:63ch;
+    margin:auto;
+    line-height:1.95}
+.story-nav{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    align-items:center;
+    border-top:1px solid #ddd3e6;
+    margin-top:30px;
+    padding-top:25px}
+.story-nav button{
+    border:1px solid #d3c8e8;
+    background:transparent;
+    color:#67498a;
+    padding:12px 15px;
+    border-radius:8px;
+    font-size:12px}
+.story-nav button:disabled{
+    opacity:.35;
+    cursor:default}
+#readerPosition{
+    font:12px Arial,sans-serif;
+    color:#7c6d93}
+.night{
+    background:#24263b;
+    color:#eee8f4}
+.night .reader-bar{
+    background:#24263b;
+    border-color:#4c465c}
+.night .reader-controls button{
+    background:#45405b;
+    color:#eee8f4}
+.night .reading-size,.night .source,.night #readerPosition{
+    color:#c4b9d5}
+.night .source a,.night .story-nav button,.night .kicker{
+    color:#ddc2ff}
+.night .source,.night .story-nav{
+    border-color:#554c65}
+.night .progress-track{
+    background:#494055}
+@media(min-width:1400px){
+    .art{
+        height:270px}
+}
+@media(max-width:1050px){
+    .hero h1{
+        font-size:55px}
+    .hero{
+        padding:45px 35px}
+    .wrap{
+        padding:0 30px}
+    .art{
+        height:290px}
+    .hero-actions{
+        gap:12px}
+}
+@media(max-width:600px){
+    .wrap{
+        padding:0 18px}
+    header{
+        height:85px}
+    .brand{
+        font-size:22px}
+    nav{
+        gap:13px;
+        font-size:11px}
+    .hero{
+        grid-template-columns:1fr;
+        padding:35px 26px 12px;
+        border-radius:10px 50px 10px 10px}
+    .hero h1{
+        font-size:47px;
+        letter-spacing:-1.7px}
+    .hero p{
+        font-size:14px}
+    .hero-art{
+        height:250px}
+    .hero-note{
+        margin-top:20px}
+    .hero-actions{
+        gap:15px}
+    .hero .primary{
+        margin-top:8px}
+    .surprise{
+        padding:12px 0}
+    .intro{
+        margin-top:43px}
+    .intro h2{
+        font-size:33px}
+    .art{
+        height:185px}
+    .grid{
+        gap:16px}
+    .card{
+        border-radius:65px 65px 12px 12px}
+    .card:nth-child(even){
+        border-radius:12px 12px 65px 12px}
+    .card-body{
+        padding:19px 15px 22px}
+    .card h3{
+        font-size:21px;
+        min-height:53px}
+    .card p{
+        font-size:12px}
+    .card:nth-child(even) .card-body{
+        padding-bottom:29px}
+    .tag{
+        font-size:9px}
+    .read{
+        font-size:10px}
+    .ribbon strong{
+        font-size:25px}
+    .reader-body{
+        padding:30px 23px}
+    .reader-label{
+        font-size:11px}
+    .reader-controls{
+        gap:5px}
+    .reader-controls button{
+        min-width:33px;
+        padding:7px}
+    .reader-bar{
+        gap:8px}
+    .story-nav button{
+        padding:10px 8px;
+        font-size:11px}
+    .progress-track{
+        top:62px}
+}
+@media(max-width:380px){
+    .reader-label{
+        width:100%}
+    .progress-track{
+        top:80px}
+    .art{
+        height:160px}
+}
+:root{
+    --world-art:none}
+/* Referanslardaki firca dokusu ve turkuaz isiklardan gelisen yeni kimlik. */
+:root{
+    --ink:#e9e8fa;
+    --purple:#b7a0e6;
+    --blue:#081d36;
+    --paper:#fffaf2;
+    --lavender:#0b1630}
+body{
+    background:#0b1630;
+    background-image:radial-gradient(ellipse at 10% 15%,#173d553a,transparent 45%),radial-gradient(ellipse at 90% 40%,#58326730,transparent 50%);
+    color:#e9e8fa}
+.wrap{
+    max-width:1390px;
+    padding:0 52px}
+header{
+    height:110px}
+.brand{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:27px;
+    color:#edf4ff}
+.brand span{
+    color:#a8e7e2}
+.pirilti-mark{
+    width:47px;
+    height:47px;
+    flex-shrink:0;
+    color:#91e6e4;
+    filter:drop-shadow(0 0 10px #5be3dc50)}
+nav a{
+    color:#c1c7dc}
+nav a:hover{
+    color:#8febeb}
+.nav-star{
+    color:#87dfdd}
+.hero{
+    min-height:550px;
+    border-radius:120px 12px 100px 12px;
+    background:linear-gradient(90deg,#12233ce8,#18234099 55%,#1d244840),var(--world-art) center/cover;
+    grid-template-columns:1fr 1fr;
+    padding:68px 60px;
+    isolation:isolate;
+    border:1px solid #70bfc322}
+.hero:before{
+    width:500px;
+    height:500px;
+    background:#5ad6d4;
+    opacity:.07;
+    filter:blur(70px)}
+.eyebrow{
+    color:#9edfdc;
+    letter-spacing:3px}
+.hero h1{
+    font-size:76px;
+    color:#faf3f4;
+    font-weight:normal}
+.hero h1 em{
+    color:#a2e5e0;
+    font-style:italic}
+.hero p{
+    color:#d2d9e6;
+    max-width:370px;
+    line-height:1.9}
+.primary{
+    background:#a4e3df;
+    color:#113741;
+    border-radius:30px;
+    border:1px solid #c6fff13d;
+    font-size:12px;
+    box-shadow:0 0 28px #53cfc512}
+.primary:hover{
+    background:#c3f5ed}
+.surprise{
+    color:#e6d8fb}
+.hero-note{
+    color:#b8c9d3}
+.hero-art{
+    height:355px}
+.world-window{
+    background:var(--world-art) 68% center/auto 100%;
+    border-radius:50% 50% 42% 48%;
+    box-shadow:inset 0 0 50px #102139,0 0 80px #7be4d82b;
+    transform:rotate(-5deg);
+    position:relative;
+    border:1px solid #90dbe82b}
+.orbit-spark{
+    position:absolute;
+    right:2%;
+    top:14%;
+    font-size:40px;
+    color:#baefed;
+    text-shadow:0 0 20px #51dce4}
+.intro h2{
+    color:#eee8fb;
+    font-size:43px}
+.kicker{
+    color:#8ddbdc}
+.muted{
+    color:#aebbd0}
+.searchbox input{
+    background:#14253e;
+    border-color:#354861;
+    color:#f1f4ff}
+.searchbox input::placeholder{
+    color:#b1bed2}
+.searchbox span{
+    color:#96d6de}
+.filters button{
+    color:#b4bfd4;
+    border-color:#3a4762}
+.filters button[aria-pressed=true]{
+    background:#b7a0dd;
+    color:#171d37;
+    border-color:#b7a0dd}
+.results-label{
+    color:#b5c3d4}
+.card,.card:nth-child(even){
+    background:#17263f;
+    border-radius:90px 12px 28px 12px;
+    box-shadow:0 9px 28px #0002;
+    border:1px solid #71929f24}
+.card:nth-child(even){
+    border-radius:12px 90px 12px 28px}
+.card .art{
+    height:280px;
+    aspect-ratio:3/4;
+    background-size:400% 200%;
+    background-color:#20314c;
+    filter:saturate(.9)}
+.card h3{
+    color:#f0eafb;
+    font-size:25px}
+.card .tag{
+    color:#9cdedb}
+.card p{
+    color:#b7c3d5}
+.read{
+    background:transparent;
+    color:#afe5e4;
+    border-color:#94a6ba25}
+.card-body{
+    padding:24px}
+.card:nth-child(even) .card-body{
+    padding-bottom:25px}
+.card:hover{
+    box-shadow:0 0 38px #7cd4d318;
+    border-color:#9ad5d65c}
+.scene-number{
+    color:#d5f5ee;
+    background:#11283ab0;
+    border:1px solid #9cdcd633}
+#empty{
+    background:#14253e;
+    color:#dfe8fa}
+#empty button{
+    background:#b1e3de;
+    color:#143945}
+.glowing-world{
+    margin:78px 0 30px;
+    min-height:460px;
+    border-radius:24px 100px 24px 24px;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(90deg,#101e39ef,#161b3ba8 46%,#101d3730),var(--world-art) center/cover;
+    border:1px solid #759cb32b;
+    display:flex;
+    align-items:center;
+    padding:55px 65px}
+.world-copy{
+    position:relative;
+    z-index:1}
+.world-copy h2{
+    font-size:50px;
+    line-height:1.18;
+    letter-spacing:-1.7px;
+    color:#f3eefc;
+    margin:20px 0}
+.world-copy h2 em{
+    font-weight:normal;
+    color:#9fe5df}
+.world-copy p{
+    color:#c6d4df;
+    font-size:14px;
+    line-height:1.9;
+    margin:20px 0 28px}
+.world-fireflies{
+    position:absolute;
+    inset:0;
+    pointer-events:none}
+.world-fireflies i{
+    position:absolute;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#adffed;
+    box-shadow:0 0 8px 3px #62e5e499;
+    animation:shimmer 5s ease-in-out infinite}
+.world-fireflies i:nth-child(1){
+    left:62%;
+    top:30%}
+.world-fireflies i:nth-child(2){
+    left:80%;
+    top:70%;
+    animation-delay:-1s}
+.world-fireflies i:nth-child(3){
+    left:53%;
+    top:66%;
+    animation-delay:-2s}
+.world-fireflies i:nth-child(4){
+    left:91%;
+    top:22%;
+    animation-delay:-3s}
+.world-fireflies i:nth-child(5){
+    left:72%;
+    top:48%;
+    animation-delay:-4s}
+.world-fireflies i:nth-child(6){
+    left:42%;
+    top:17%;
+    animation-delay:-2.6s}
+@keyframes shimmer{
+    0%,100%{
+        opacity:.25;
+        transform:translateY(0)}
+    50%{
+        opacity:1;
+        transform:translateY(-12px)}
+}
+footer{
+    padding:25px 0 38px;
+    color:#a7b6ca;
+    font-size:11px;
+    align-items:center}
+footer .brand{
+    font-size:21px!important}
+dialog{
+    color:#28344a}
+dialog .kicker{
+    color:#755297}
+.reader-controls button,.close{
+    color:#514273}
+.reader-controls{
+    color:#514273}
+.night .kicker{
+    color:#b6e4e1}
+.night{
+    background:#10223b}
+.night .reader-bar{
+    background:#10223b}
+.night .reader-controls button{
+    background:#253e58}
+.night .source,.night #readerPosition{
+    color:#b5c7d7}
+.night .source a,.night .story-nav button{
+    color:#a1e4df}
+.night .reader-text{
+    color:#e4e9f3}
+.night #readProgress{
+    background:#8cd9d6}
+.progress-track{
+    top:70px}
+@media(min-width:1400px){
+    .card .art{
+        height:310px}
+}
+@media(max-width:1050px){
+    .wrap{
+        padding:0 32px}
+    .hero{
+        padding:50px 40px;
+        min-height:500px}
+    .hero h1{
+        font-size:60px}
+    .card .art{
+        height:360px}
+    .world-window{
+        height:310px}
+    .glowing-world{
+        padding:45px;
+        min-height:430px}
+}
+@media(max-width:600px){
+    .wrap{
+        padding:0 18px}
+    header{
+        height:88px}
+    .brand{
+        font-size:21px;
+        gap:2px}
+    .pirilti-mark{
+        width:33px;
+        height:38px}
+    nav{
+        gap:12px;
+        font-size:11px}
+    .hero{
+        grid-template-columns:1fr;
+        padding:39px 27px 24px;
+        border-radius:70px 10px 55px 10px;
+        background-position:center}
+    .hero h1{
+        font-size:53px;
+        letter-spacing:-1.8px}
+    .hero p{
+        font-size:14px}
+    .world-window{
+        height:220px;
+        width:85%;
+        margin:22px auto 0}
+    .hero-note{
+        font-size:9px}
+    .intro h2{
+        font-size:33px}
+    .intro .muted{
+        font-size:13px}
+    .card .art{
+        height:220px}
+    .card,.card:nth-child(even){
+        border-radius:60px 10px 20px 10px}
+    .card:nth-child(even){
+        border-radius:10px 60px 10px 20px}
+    .card-body{
+        padding:17px 14px}
+    .card h3{
+        font-size:21px}
+    .card p{
+        font-size:12px}
+    .card:nth-child(even) .card-body{
+        padding-bottom:17px}
+    .glowing-world{
+        margin-top:45px;
+        padding:37px 26px;
+        min-height:430px;
+        border-radius:20px 65px 20px 20px;
+        background-position:63% center}
+    .world-copy h2{
+        font-size:38px}
+    .world-copy p{
+        font-size:13px}
+    footer{
+        align-items:flex-start;
+        gap:15px}
+    .progress-track{
+        top:62px}
+}
+@media(max-width:380px){
+    .card .art{
+        height:190px}
+    .hero h1{
+        font-size:46px}
+    .progress-track{
+        top:80px}
+}
+@media(prefers-reduced-motion:reduce){
+    .world-fireflies i{
+        animation:none}
+}
+/* Dar on izleme pencerelerinde de okunabilir baslik ve duzen. */
+.hero h1{
+    font-size: clamp(40px, 5vw, 72px);
+}
+@media (max-width: 850px){
+    .hero{
+        grid-template-columns: 1fr;
+    }
+    .hero h1{
+        font-size: 52px;
+    }
+    .hero-art{
+        display: none;
+    }
+    .hero p{
+        max-width: 470px;
+    }
+}
+/* Masal kartlari: sade kitap kapagi duzeni. */
+.card, .card:nth-child(even) {
+    border-radius: 5px;
+    border: 1px solid #748a9d55;
+    background: #14253c;
+    box-shadow: 5px 5px 0 #071326;
+}
+.card .art {
+    border-radius: 0;
+    margin: 10px 10px 0;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    filter: none;
+}
+.card-body, .card:nth-child(even) .card-body {
+    padding: 22px 21px 23px;
+}
+.card h3 { min-height: 60px; }
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 7px 9px 0 #071326;
+    border-color: #97b8bd;
+}
+.scene-number {
+    border-radius: 2px;
+    width: 27px;
+    height: 27px;
+    font-style: normal;
+    background: #10283bd9;
+}
+@media (max-width: 600px) {
+    .card, .card:nth-child(even) { border-radius: 4px; }
+    .card .art { height: auto; margin: 7px 7px 0; }
+    .card-body, .card:nth-child(even) .card-body { padding: 17px 13px; }
+    .card h3 { font-size: 21px; }
+}
+/* Ana gorselin cercevesi ve hafif hareketli isik baloncuklari. */
+.hero {
+    border-radius: 26px 88px 26px 26px;
+    border: 1px solid #83d7d34a;
+    box-shadow: inset 0 0 0 7px #0c203945, 0 16px 48px #020c1e35;
+    position: relative;
+    overflow: hidden;
+}
+.hero-copy { position: relative; z-index: 3; }
+.hero-art { z-index: 1; }
+.hero-sparkles {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+}
+.hero-sparkles i {
+    position: absolute;
+    bottom: -50px;
+    width: 14px;
+    height: 14px;
+    border: 0;
+    border-radius: 0;
+    background: #cefff8;
+    clip-path: none;
+    filter: drop-shadow(0 0 4px #82f4e9);
+    box-shadow: none;
+    animation: sparkle-drift 19s linear infinite;
+}
+.hero-sparkles i:nth-child(1) { left: 7%; animation-delay: -3s; }
+.hero-sparkles i:nth-child(2) { left: 17%; width: 8px; height: 8px; animation-delay: -12s; animation-duration: 24s; }
+.hero-sparkles i:nth-child(3) { left: 29%; width: 22px; height: 22px; animation-delay: -7s; animation-duration: 26s; }
+.hero-sparkles i:nth-child(4) { left: 38%; width: 10px; height: 10px; animation-delay: -17s; }
+.hero-sparkles i:nth-child(5) { left: 47%; width: 17px; height: 17px; animation-delay: -9s; animation-duration: 22s; }
+.hero-sparkles i:nth-child(6) { left: 55%; width: 9px; height: 9px; animation-delay: -14s; }
+.hero-sparkles i:nth-child(7) { left: 64%; width: 25px; height: 25px; animation-delay: -1s; animation-duration: 27s; }
+.hero-sparkles i:nth-child(8) { left: 73%; width: 12px; height: 12px; animation-delay: -15s; animation-duration: 21s; }
+.hero-sparkles i:nth-child(9) { left: 83%; width: 18px; height: 18px; animation-delay: -6s; }
+.hero-sparkles i:nth-child(10) { left: 92%; width: 8px; height: 8px; animation-delay: -11s; animation-duration: 25s; }
+.hero-sparkles i:nth-child(11) { left: 23%; width: 6px; height: 6px; animation-delay: -19s; animation-duration: 23s; }
+.hero-sparkles i:nth-child(12) { left: 78%; width: 7px; height: 7px; animation-delay: -4s; animation-duration: 20s; }
+@keyframes sparkle-drift {
+    0% { transform: translate(0, 0); opacity: 0; }
+    10% { opacity: .45; }
+    50% { transform: translate(17px, -330px) rotate(45deg) scale(.7); opacity: .85; }
+    90% { opacity: .3; }
+    100% { transform: translate(-9px, -740px); opacity: 0; }
+}
+/* Kapak resimlerinin renklerini koruyan yumusak isik. */
+.card .art {
+    position: relative;
+    filter: brightness(1.09) saturate(1.06);
+}
+.card .art::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at 25% 18%, #c1fff016, transparent 55%),
+    radial-gradient(circle at 82% 28%, #caffefdb 0 1px, transparent 3px),
+    radial-gradient(circle at 18% 68%, #a5f1edb3 0 1px, transparent 3px),
+    radial-gradient(circle at 72% 80%, #ffe7baaa 0 1px, transparent 2px);
+}
+.card:hover .art { filter: brightness(1.13) saturate(1.07); }
+.scene-number { z-index: 1; }
+.glowing-world {
+    border-radius: 26px 26px 80px 26px;
+    border: 1px solid #83d7d34a;
+    box-shadow: inset 0 0 0 7px #0c203945, 0 16px 48px #020c1e35;
+}
+@media (max-width: 600px) {
+    .hero { border-radius: 22px 58px 22px 22px; }
+    .glowing-world { border-radius: 22px 22px 58px 22px; }
+    .hero-sparkles i { animation-duration: 25s; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-sparkles i { animation: none; bottom: auto; top: 24%; opacity: .3; }
+    .hero-sparkles i:nth-child(even) { top: 70%; }
+}
+
+
+
+/* Kucuk yildiz piriltilari */
+.hero-sparkles i { width: 8px; height: 8px; }
+.hero-sparkles i:nth-child(3n) { width: 11px; height: 11px; }
+.hero-sparkles i:nth-child(2n) { width: 5px; height: 5px; }
+
+
+
+/* Girişte süzülen küçük ışık noktaları. */
+.hero-sparkles i,
+.hero-sparkles i:nth-child(n) {
+    width: 3px;
+    height: 3px;
+    border: 0;
+    border-radius: 50%;
+    clip-path: none;
+    background: #d5fff8;
+    box-shadow: 0 0 5px 1px #9bf5ec80;
+    filter: none;
+}
+.hero-sparkles i:nth-child(3n) { width: 2px; height: 2px; }
+.hero-sparkles i:nth-child(5n) { width: 4px; height: 4px; }
